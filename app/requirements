@@ -1,6 +1,5 @@
 Flask
-mysql-connector
+flask-mysql
 simplejson
-mysql
 requests
 configparser

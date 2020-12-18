@@ -143,7 +143,7 @@ def get_api_key():
 
 def get_weather_results(city_name, api_key):
    api_url = "http://api_url = api.openweathermap.org/" \
-             "data/2.5/weather?q={}&units=imperial&appid={}.format(city_name, api_key)
+             "data/2.5/weather?q={}&units=imperial&appid={}.format(city_name, api_key)"
    r = requests.get(api_url)
    return r.json()
 
