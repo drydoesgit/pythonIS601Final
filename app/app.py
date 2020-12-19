@@ -57,7 +57,7 @@ def form_update_post(city_id):
 
 @app.route('/cities/new', methods=['GET'])
 def form_insert_get():
-    return render_template('new.html', title='New City Form')
+    return renderte('new.html', title='New City Form')
 
 
 @app.route('/cities/new', methods=['POST'])
@@ -161,7 +161,7 @@ def render_results1():
     weather = data["weather"][0]["main"]
     location = data["name"]
 
-    return render_template('#',
+    return render_template(
                            location=location, temp=temp,
                            feels_like=feels_like, weather=weather)
 def get_api_key():
