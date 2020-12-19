@@ -23,7 +23,7 @@
 - Click Search
 ##
 ## Instructions 2nd Feature: Zip Code Search
-City Search -
+City Search 
 - Access the Home Page
 - Select Search by Zip Code
 - Input the name of the zip code you would like to know real time weather information on
