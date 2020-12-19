@@ -135,6 +135,7 @@ def render_results():
     return render_template('#',
                            location=location, temp=temp,
                            feels_like=feels_like, weather=weather)
+
 def get_api_key():
     config = configparser.ConfigParser()
     config.read('config.ini')
@@ -146,13 +147,11 @@ def get_weather_results(city_name, api_key):
    r = requests.get(api_url)
    return r.json()
 
-def get_api_key():
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    return config['openweathermap']['api']
+def weather_dashboard():
+    return render_template('index.html')
 
 @app.route('/results', methods=['POST'])
-def render_results():
+def render_results1():
     zip_code = request.form['zipcode']
 
     api_key = get_api_key()
@@ -165,17 +164,15 @@ def render_results():
     return render_template('#',
                            location=location, temp=temp,
                            feels_like=feels_like, weather=weather)
-
 def get_api_key():
     config = configparser.ConfigParser()
     config.read('config.ini')
     return config['openweathermap']['api']
 
-return r.json()
-
-
-def zip_code(zip_code, api_key)
+def zip_code(zip_code, api_key):
     api_url = "http://api.openwaethermap.org/data/2.5/weather?zip=()&appid=.format(zip_code, api_key)"
+    r = requests.get(api_url)
+    return r.json()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
