@@ -135,7 +135,6 @@ def render_results():
     return render_template('#',
                            location=location, temp=temp,
                            feels_like=feels_like, weather=weather)
-
 def get_api_key():
     config = configparser.ConfigParser()
     config.read('config.ini')
@@ -147,6 +146,8 @@ def get_weather_results(city_name, api_key):
    r = requests.get(api_url)
    return r.json()
 
+def get_zipcode(zip, api_kkey)
+    api_url = http://api.openweathermap.org/data/2.5/weather?zip={zip code}&appid={API key}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
