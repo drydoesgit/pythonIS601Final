@@ -146,7 +146,7 @@ def get_weather_results(city_name, api_key):
    r = requests.get(api_url)
    return r.json()
 
-def get_zipcode(zip, api_kkey)
+def get_zipcode(zip_code, api_key)
     api_url = "http://api.openweathermap.org/data/2.5/weather?zip={}&appid={}.format{zip, api_key}"
 r = request.get(api_url)
 return r.json()
