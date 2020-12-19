@@ -28,3 +28,5 @@ City Search
 - Select Search by Zip Code
 - Input the name of the zip code you would like to know real time weather information on
 - Click Search
+## Word Document
+https://docs.google.com/document/d/1RbmtgnFp5dCs_3mRGo_MW-YXHPqD3tCv3sKoz3onbCU/edit#
