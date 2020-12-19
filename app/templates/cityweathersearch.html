@@ -1,5 +1,6 @@
-{% extends "layout.html" %} {% block content %}
-<html>
+{% extends "layout.html" %}
+{% block content %}
+
 <body>
 <h2 class="weatherText">City Weather Dashboard</h2>
 <form class="weatherText" id="weatherForm" action="{{ url_for('render_results') }}" method="post">
@@ -7,7 +8,6 @@
     <input class="weatherText" id="weatherSubmit" type="submit" value="Search">
 </form>
 </body>
-</html>
 <h2 class="weatherText">Zip Code</h2>
 <form class="weatherText" id="weatherForm" action="{{ url_for('render_results1') }}" method="post">
     City Name: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
