@@ -117,9 +117,9 @@ def api_delete(city_id) -> str:
     resp = Response(status=210, mimetype='application/json')
     return resp
 
-@app.route(`/api/openweathermap`)
+@app.route('/api/openweathermap/')
 def weather_dashboard():
-    return render_template(`index.html`)
+    return render_template('index.html')
 
 @app.route('/results', methods=['POST'])
 def render_results():
@@ -146,6 +146,7 @@ def get_weather_results(city_name, api_key):
              "data/2.5/weather?q={}&units=imperial&appid={}.format(city_name, api_key)"
    r = requests.get(api_url)
    return r.json()
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
