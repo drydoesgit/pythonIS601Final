@@ -1,4 +1,4 @@
-# This is the final web application project for IS 601: Search by City Name Look Up
+#  is the final web application project for IS 601: Search by City Name Look Up
 - Dryden Feature: Realtime Weather Feature (Openweathermap API) by City Name
 - Sidney Feature: Realtime Weather Feature (Openweathermap API) by Zip Code
 ##
