@@ -146,30 +146,9 @@ def get_weather_results(city_name, api_key):
    r = requests.get(api_url)
    return r.json()
 
-@app.route('/results', methods=['POST'])
-def render_results_zip():
-    zip_code = request.form['zipcode']
-
-    api_key = get_api_key()
-    data = get_weather_results(zip_code, api_key)
-    temp = "{0:.2f}".format(data["main"]["temp"])
-    feels_like = "{0:.2f}".format(data["main"]["feels_like"])
-    weather = data["weather"][0]["main"]
-    location = data["name"]
-
-    return render_template('#',
-                           location=location, temp=temp,
-                           feels_like=feels_like, weather=weather)
-def get_api_key():
-    config = configparser.ConfigParser()
-    config.read('config.ini')
-    return config['openweathermap']['api']
-
-def get_weather_results_zip(zip_code, api_key):
-   api_url = "http://api_url = api.openweathermap.org/" \
-             "api.openweathermap.org/data/2.5/weather?zip={}&units=imperial&appid={}.format(zip_code, api_key)"
-   r = requests.get(api_url)
-   return r.json()
-
+def get_zipcode(zip, api_kkey)
+    api_url = "http://api.openweathermap.org/data/2.5/weather?zip={}&appid={}.format{zip, api_key}"
+r = request.get(api_url)
+return r.json()
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
