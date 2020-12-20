@@ -160,7 +160,7 @@ def render_results1():
     weather = data["weather"][0]["main"]
     location = data["name"]
 
-    return render_template('#',
+    return render_template(
                            location=location, temp=temp,
                            feels_like=feels_like, weather=weather)
 def get_api_key():
