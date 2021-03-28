@@ -2,14 +2,32 @@
 {% block content %}
 
 <body>
-<h2 class="weatherText">City Weather Dashboard</h2>
+<h2 class="weatherText">Register</h2>
+
 <form class="weatherText" id="weatherForm" action="{{ url_for('render_results') }}" method="post">
-    City Name: <input class="weatherText" id="weatherInput" type="text" name="CityName"><br>
-    <input class="weatherText" id="weatherSubmit" type="submit" value="Search">
+    Name: <input class="weatherText" id="weatherInput" type="text" name="CityName"><br>
+    <input class="weatherText" id="weatherSubmit" type="submit" value="enter">
 </form>
 </body>
-<h2 class="weatherText">Zip Code</h2>
+<h2 class="weatherText">Name</h2>
 <form class="weatherText" id="weatherForm" action="{{ url_for('render_results1') }}" method="post">
-    City Name: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
-    <input class="weatherText" id="weatherSubmit" type="submit" value="Search">
+    Language: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
+    <input class="weatherText" id="weatherSubmit" type="submit" value="enter">
+<h2 class="weatherText">Langague</h2>
+<form class="weatherText" id="weatherForm" action="{{ url_for('render_results1') }}" method="post">
+    Address: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
+    <input class="weatherText" id="weatherSubmit" type="submit" value="enter">
+    <h2 class="weatherText">Address</h2>
+<form class="weatherText" id="weatherForm" action="{{ url_for('render_results1') }}" method="post">
+    Phone Number: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
+    <input class="weatherText" id="weatherSubmit" type="submit" value="Search"><h2 class="weatherText">Phone Number</h2>
+<form class="weatherText" id="weatherForm" action="{{ url_for('render_results1') }}" method="post">
+    Date of Birth: <input class="weatherText" id="weatherInput" type="text" name="zip_code"><br>
+    <input class="weatherText" id="weatherSubmit" type="submit" value="enter">
+
+
+
+
+
+
 {% endblock %}
